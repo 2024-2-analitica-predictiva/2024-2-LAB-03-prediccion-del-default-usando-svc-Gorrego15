@@ -210,7 +210,7 @@ def optimize(pipeline,x_train,y_train,x_test,y_test):
     }
 
     grid_search = GridSearchCV(
-    pipeline, param_grid, cv=10, scoring="precision", verbose=2, n_jobs=-1 
+    pipeline, param_grid, cv=10, scoring="balanced_accuracy", verbose=2, n_jobs=-1 
     )
     
     with mlflow.start_run():
